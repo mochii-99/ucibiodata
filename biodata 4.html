@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Suci</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #f1d2e5, #edadc4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 400px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            background-color: rgba(0, 123, 255, 0.2);
+            border-radius: 50%;
+            top: -250px;
+            left: -200px;
+            opacity: 0.3;
+        }
+
+        .profile {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .profile img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 4px solid #f2a7dd;
+            margin-bottom: 15px;
+            transition: transform 0.5s ease;
+        }
+
+        .profile img:hover {
+            transform: scale(1.1);
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .accordion {
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .accordion-item {
+            background-color: #f9f9f9;
+            margin-bottom: 15px;
+            border-radius: 15px;
+            padding: 15px 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .accordion-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .accordion-header {
+            font-size: 1.3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .accordion-header .toggle-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-body {
+            display: none;
+            padding: 10px 0;
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            animation: fadeIn 0.3s ease forwards;
+        }
+
+        .accordion-body p {
+            margin: 5px 0;
+        }
+
+        .accordion-body ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .accordion-body ul li {
+            padding: 5px 0;
+        }
+
+        .active .toggle-icon {
+            transform: rotate(45deg);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive untuk tampilan yang lebih kecil */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            .accordion-header {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="profile">
+            <img src="image/photo.jpg" alt="Profile Picture">
+            <h1>Suci Sulistiawati</h1>
+            <p>1A| JTK | D3 </p>
+        </div>
+
+        <div class="accordion">
+            <!-- Section: Identitas Diri -->
+            <div class="accordion-item">
+                <div class="accordion-header">Identitas Diri <span class="toggle-icon">+</span></div>
+                <div class="accordion-body">
+                    <p><strong>Nama:</strong> Suci Sulsitiawati </p>
+                    <p><strong>No Telpon:</strong> 081221436396</p>
+                    <p><strong>Email:</strong> sucisulistiawati0808@gmail.com</p>
+                    <p><strong>Prodi:</strong> D3 Teknik Informatika</p>
+                    <p><strong>Alamat Tinggal:</strong> Jl.Hj Abdul Syukur rt 04 rw 01 no 62 </p>
+                </div>
+            </div>
+
+            <!-- Section: Riwayat Pendidikan -->
+            <div class="accordion-item">
+                <div class="accordion-header">Riwayat Pendidikan <span class="toggle-icon">+</span></div>
+                <div class="accordion-body">
+                    <ul>
+                        <li>Politeknik Negri Bandung D3 - Teknik Informatika</li>
+                        <li>SMKN 1 Cimahi</li>
+                        <li>SMPIT Fitrah Insani </li>
+                        <li>SDN Cipageran Mandiri 2 </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section: Kemampuan dan Keterampilan -->
+            <div class="accordion-item">
+                <div class="accordion-header">Kemampuan dan Keterampilan <span class="toggle-icon">+</span></div>
+                <div class="accordion-body">
+                    <ul>
+                        <li>Microsoft Word</li>
+                        <li>Microsoft Excel</li>
+                        <li>Power Point</li>
+                        <li>Canva</li>
+                        <li>Ibis Pain</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript untuk toggle accordion
+        const accordionItems = document.querySelectorAll('.accordion-item');
+
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            header.addEventListener('click', () => {
+                const body = item.querySelector('.accordion-body');
+                const icon = header.querySelector('.toggle-icon');
+
+                body.style.display = body.style.display === 'block' ? 'none' : 'block';
+                icon.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
